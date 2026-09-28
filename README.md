@@ -1,36 +1,64 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Shantanu's Portfolio
 
-## Getting Started
+A dark, terminal-inspired Next.js portfolio website built for a fully static export.
 
-First, run the development server:
+## Tech Stack
+- Next.js (App Router, Static Export)
+- TypeScript
+- Tailwind CSS (v4)
+- Framer Motion
+
+## Content Setup (V2)
+To update the portfolio for your V2 deployment, you only need to modify `src/data/content.ts`.
+
+Checklist of things to supply:
+- [ ] Update `profile` (email, github link, linkedin link, resume URL)
+- [ ] Place your `resume.pdf` in the `public` folder
+- [ ] Update `skills` items
+- [ ] Fill in your actual `projects` (last 6 months)
+- [ ] Add your full `experiences` history
+- [ ] Update the `about` section facts and bio
+- [ ] Replace `fly.toml` app name with your unique Fly.io app name
+
+## Local Development
 
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+To build and test the static export locally:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+```bash
+npm run build
+npx serve out
+```
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Docker Build
 
-## Learn More
+To verify the Docker image locally:
 
-To learn more about Next.js, take a look at the following resources:
+```bash
+docker build -t shantanu-portfolio .
+docker run -p 8080:80 shantanu-portfolio
+```
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+Then visit `http://localhost:8080`.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Deployment (Fly.io)
 
-## Deploy on Vercel
+This project is configured to run on Fly.io using a `shared-cpu-1x` (256MB) instance via Nginx.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+1. Authenticate with Fly CLI:
+   ```bash
+   fly auth login
+   ```
+2. Update the `app` name in `fly.toml` to a globally unique name.
+3. Deploy the application:
+   ```bash
+   fly deploy
+   ```
+4. For future redeployments after editing `content.ts`:
+   ```bash
+   fly deploy
+   ```
