@@ -31,53 +31,75 @@ export const skills: SkillGroup[] = [
 ];
 
 export const projects: Project[] = [
+  // --- Agentic Engineering ---
   {
-    title: "Agentic Trading Infrastructure",
-    description: "A portfolio of interoperating systems for Indian derivatives markets running an asynchronous signal engine.",
+    title: "ARES (Adaptive Reversal & Entry Signal)",
+    category: "Agentic Engineering",
+    description: "A high-performance, asynchronous algorithmic trading signal system for NIFTY 50 options scalping.",
     bullets: [
-      "Engineered an asynchronous signal engine running XGBoost predictions alongside a market-regime forecaster.",
-      "Built a position-guarding scanner and a real-time microstructure terminal sharing a Redis-based rate-governance layer.",
+      "Monitors 1-minute price action, OI, and Implied Volatility to identify high-probability reversal setups.",
+      "Engineered a five-layer architecture (Ingestion, Engine, Detectors, Position Manager, Storage) with a strict 15-minute signal cooldown.",
+      "Integrates a standalone XGBoost prediction module and LLM Decision Engine (Jev / Laya) for regime classification.",
     ],
-    tags: ["Python", "XGBoost", "Redis", "Supabase", "Fly.io"],
+    tags: ["Python 3.10+", "DhanHQ API", "Supabase", "XGBoost", "Fly.io"],
     links: {
-      code: "https://github.com/dubeyshantanu2",
+      code: "https://github.com/Manmade-Anyme/ARES",
     },
     featured: true,
   },
   {
-    title: "Clawbot",
-    description: "A Discord bot integrating the Claude API for natural-language code generation and iterative debugging.",
+    title: "KRONOS",
+    category: "Agentic Engineering",
+    description: "A suggestion-only monthly short-strangle scanner and trade guardian for NSE F&O stocks & MCX commodities.",
     bullets: [
-      "Implemented Docker-sandboxed execution for secure environment isolation.",
-      "Engineered per-user SQLite conversation history, deploying the system on a VPS for 24/7 availability.",
+      "Scans daily for range-bound underlyings with overpriced options and ranks strangle suggestions.",
+      "Guards open trades with graded hourly advisory pulses (HOLD/TIGHTEN_SL/EXIT) based on IV expansion and OI wall shifts.",
+      "Operates on a threaded producer/consumer architecture with a centralized Dhan Redis Hub integration.",
     ],
-    tags: ["Claude API", "Docker", "SQLite", "Discord API"],
+    tags: ["Python", "Redis", "Cron", "Discord API"],
     links: {
-      code: "https://github.com/dubeyshantanu2",
+      code: "https://github.com/Manmade-Anyme/Kronos",
     },
-    featured: false,
+    featured: true,
   },
   {
     title: "Kairos",
-    description: "A real-time market-monitoring system ingesting live data and delivering scored alerts.",
+    category: "Agentic Engineering",
+    description: "A headless intraday condition scoring engine (environment monitor) specifically designed for NIFTY Options Buying.",
     bullets: [
-      "Ingests live data via REST APIs at 1-minute intervals for continuous monitoring.",
-      "Persists time-series data to Supabase/PostgreSQL and delivers scored alerts via Discord webhooks.",
+      "Runs a rolling 60-second cycle evaluating 7 conditions (Momentum, IV Flow, Gammas, VWAP) to broadcast GO/CAUTION/AVOID alerts.",
+      "Communicates exclusively with a Discord orchestrator bot via an asynchronous Supabase Shared State Bridge.",
+      "Features an anti-flap IV Contraction Cap hysteresis to protect from theta-crush during dying markets.",
     ],
-    tags: ["REST APIs", "Supabase", "PostgreSQL"],
+    tags: ["Python", "PostgreSQL", "Cron", "Discord Webhooks"],
     links: {
-      code: "https://github.com/dubeyshantanu2",
+      code: "https://github.com/Manmade-Anyme/Kairos",
     },
-    featured: false,
+    featured: true,
   },
+  
+  // --- Mobile App Development ---
   {
     title: "The Draft (Mobile Platform)",
+    category: "Mobile App Development",
     description: "A cross-platform social media application for jobseekers and posters.",
     bullets: [
       "Implemented complex state management architecture using Redux and React Query.",
       "Integrated Firebase for real-time updates and Keychain for secure storage.",
     ],
     tags: ["React Native", "Redux", "Firebase", "Mixpanel"],
+    links: {},
+    featured: false,
+  },
+  {
+    title: "Greenspace Golf",
+    category: "Mobile App Development",
+    description: "A free social application for golf enthusiasts to connect and share their passion.",
+    bullets: [
+      "Built using React Native CLI with Redux Toolkit for API integration.",
+      "Features deep linking, FCM/APNS push notifications, and Google/Apple auth.",
+    ],
+    tags: ["React Native", "Redux Toolkit", "FCM"],
     links: {},
     featured: false,
   },

@@ -17,6 +17,7 @@ export interface SkillGroup {
 export interface Project {
   title: string;
   description: string;
+  category: string;
   bullets: string[];
   tags: string[];
   links: {
