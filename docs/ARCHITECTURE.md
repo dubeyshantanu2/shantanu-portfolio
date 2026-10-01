@@ -25,3 +25,16 @@ Built a fully static, single-page scroll portfolio with a dark terminal theme. D
 **TODOs**
 - [ ] User needs to upload the actual `resume.pdf` to the `public/` directory.
 - [ ] Finalize tweaks for V3.
+
+## 2026-10-02 01:10 · Added Writing / Blog Section & Linked Medium Post
+
+Added a dedicated technical writing section to showcase engineering blog posts and articles.
+
+**Decisions**
+- Created `BlogPost` interface in `src/types/index.ts` supporting title, description, url, tags, read time, date, platform, and featured status.
+- Added Medium article: *How to Give Your Algorithmic Trading System Common Sense Using TypeSafe AI* (`https://medium.com/@dubeyshantanu2/how-to-give-your-algorithmic-trading-system-common-sense-using-typesafe-ai-b52ecd45c627`).
+- Implemented `BlogSection.tsx` and `BlogCard.tsx` matching terminal theme with tag filters, platform badges, and direct external reading links.
+- Updated `Navbar.tsx` with smooth scroll anchor (`#writing`).
+- Added Medium social icon and profile link to `Hero.tsx` and `Footer.tsx`.
+- Resolved TypeScript and ESLint warnings in layout and theme toggle.
+

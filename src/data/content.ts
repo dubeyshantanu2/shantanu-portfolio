@@ -1,4 +1,4 @@
-import { Profile, SkillGroup, Project, Experience, About } from "@/types";
+import { Profile, SkillGroup, Project, BlogPost, Experience, About } from "@/types";
 
 export const profile: Profile = {
   name: "Shantanu Dubey",
@@ -7,6 +7,7 @@ export const profile: Profile = {
   email: "dubeyshantanu2@gmail.com",
   github: "https://github.com/dubeyshantanu2",
   linkedin: "https://linkedin.com/in/shantanu-dubey-6709b711a",
+  medium: "https://medium.com/@dubeyshantanu2",
   resumeUrl: "/resume.pdf", 
   availability: "Open to opportunities",
 };
@@ -102,6 +103,20 @@ export const projects: Project[] = [
     tags: ["React Native", "Redux Toolkit", "FCM"],
     links: {},
     featured: false,
+  },
+];
+
+export const blogPosts: BlogPost[] = [
+  {
+    title: "How to Give Your Algorithmic Trading System Common Sense Using TypeSafe AI",
+    description:
+      "Explores augmenting quantitative trading pipelines (such as ARES) with ultrafast System 1 judgment models like TypeSafe AI's Jev — evaluating structural market regime, trade setup quality, and barrier probabilities in sub-second execution loops.",
+    url: "https://medium.com/@dubeyshantanu2/how-to-give-your-algorithmic-trading-system-common-sense-using-typesafe-ai-b52ecd45c627",
+    date: "Oct 2026",
+    readTime: "5 min read",
+    tags: ["Algorithmic Trading", "TypeSafe AI", "System One", "Python", "ARES"],
+    platform: "Medium",
+    featured: true,
   },
 ];
 
