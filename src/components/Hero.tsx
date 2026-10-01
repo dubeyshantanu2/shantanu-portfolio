@@ -3,7 +3,7 @@
 import { motion } from "framer-motion";
 import { profile } from "@/data/content";
 import { Mail, FileText } from "lucide-react";
-import { GithubIcon, LinkedinIcon } from "./Icons";
+import { GithubIcon, LinkedinIcon, MediumIcon } from "./Icons";
 
 export function Hero() {
   return (
@@ -47,7 +47,7 @@ export function Hero() {
             </a>
           </div>
 
-          <div className="mt-12 flex gap-6">
+          <div className="mt-12 flex gap-6 items-center">
             <a href={profile.github} target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-accent transition-colors">
               <GithubIcon width={24} height={24} />
               <span className="sr-only">GitHub</span>
@@ -56,6 +56,12 @@ export function Hero() {
               <LinkedinIcon width={24} height={24} />
               <span className="sr-only">LinkedIn</span>
             </a>
+            {profile.medium && (
+              <a href={profile.medium} target="_blank" rel="noopener noreferrer" className="text-foreground/60 hover:text-accent transition-colors">
+                <MediumIcon width={24} height={24} />
+                <span className="sr-only">Medium</span>
+              </a>
+            )}
           </div>
         </motion.div>
       </div>

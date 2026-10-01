@@ -5,6 +5,7 @@ export interface Profile {
   email: string;
   github: string;
   linkedin: string;
+  medium?: string;
   resumeUrl: string;
   availability: string;
 }
@@ -26,6 +27,17 @@ export interface Project {
   };
   featured: boolean;
   image?: string;
+}
+
+export interface BlogPost {
+  title: string;
+  description: string;
+  url: string;
+  date: string;
+  readTime: string;
+  tags: string[];
+  platform: string;
+  featured?: boolean;
 }
 
 export interface Experience {
