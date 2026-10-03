@@ -46,3 +46,5 @@ Updated the Mobile App Development section to align with the latest PDF resume, 
 - Added Walmart Global Tech project (*Sidekick*) as a featured entry with Play Store link.
 - Populated six additional professional and independent React Native projects (*The Draft*, *Platform*, *Greenspace Golf*, *Path Truck and Trailer*, *Suggaa*, *VBN Official*, and *B2BDock*).
 - Ensured tags reflect the specific technical stacks (React Navigation, Redux Toolkit, Expo, Skia, Appium, Bitrise, etc.) for each respective project.
+- Added direct live App Store and Play Store tracking links to *Greenspace Golf*, *Path Truck and Trailer*, *Suggaa*, and *VBN Official*.
+
