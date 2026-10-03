@@ -129,7 +129,9 @@ export const projects: Project[] = [
       "Features deep linking, FCM/APNS push notifications, and Google/Apple auth."
     ],
     tags: ["React Native", "Redux Toolkit", "FCM"],
-    links: {},
+    links: {
+      live: "https://apps.apple.com/us/app/greenspace-golf/id1632177881"
+    },
     featured: false,
   },
   {
@@ -141,7 +143,9 @@ export const projects: Project[] = [
       "Developed with TypeScript to ensure clean, maintainable code aligned with industry best practices."
     ],
     tags: ["React Native", "TypeScript", "Maps API"],
-    links: {},
+    links: {
+      live: "https://apps.apple.com/us/app/path-truck-trailer/id6450257256"
+    },
     featured: false,
   },
   {
@@ -153,7 +157,9 @@ export const projects: Project[] = [
       "Built complex UI screens using Skia and Reanimated within an Expo monorepo setup."
     ],
     tags: ["React Native", "Expo", "Skia", "Reanimated"],
-    links: {},
+    links: {
+      live: "https://play.google.com/store/apps/details?id=app.suggaa.rider&hl=en_IN"
+    },
     featured: false,
   },
   {
@@ -164,7 +170,9 @@ export const projects: Project[] = [
       "Built with React Native for a responsive user experience with statistics for recurring in-person meetups."
     ],
     tags: ["React Native"],
-    links: {},
+    links: {
+      live: "https://apps.apple.com/us/app/vbn-official/id1617863006"
+    },
     featured: false,
   },
   {
