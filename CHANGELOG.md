@@ -8,6 +8,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **React Native Portfolio Update**: Added comprehensive list of React Native projects from the latest resume to the Mobile App Development category.
+- **Walmart Integration**: Added *Sidekick (Me@Walmart)* as a featured project with direct Play Store link.
+- **New Mobile Projects**: Added *The Draft*, *Platform*, *Greenspace Golf*, *Path Truck and Trailer*, *Suggaa*, *VBN Official*, and *B2BDock*.
+
+### Added (Previous)
 - **Writing / Blog Section**: Added dedicated section (`#writing`) to showcase engineering articles and technical publications.
 - **Medium Article Integration**: Added Shantanu's latest post: *How to Give Your Algorithmic Trading System Common Sense Using TypeSafe AI*.
 - **Blog Components**: Created `BlogSection` and `BlogCard` components with terminal aesthetic, platform badge, tags, read times, and external link triggers.

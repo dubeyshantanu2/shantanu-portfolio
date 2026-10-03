@@ -38,3 +38,11 @@ Added a dedicated technical writing section to showcase engineering blog posts a
 - Added Medium social icon and profile link to `Hero.tsx` and `Footer.tsx`.
 - Resolved TypeScript and ESLint warnings in layout and theme toggle.
 
+## 2026-10-04 02:07 · React Native Portfolio Overhaul
+
+Updated the Mobile App Development section to align with the latest PDF resume, significantly expanding the scope of showcased mobile engineering work.
+
+**Decisions**
+- Added Walmart Global Tech project (*Sidekick*) as a featured entry with Play Store link.
+- Populated six additional professional and independent React Native projects (*The Draft*, *Platform*, *Greenspace Golf*, *Path Truck and Trailer*, *Suggaa*, *VBN Official*, and *B2BDock*).
+- Ensured tags reflect the specific technical stacks (React Navigation, Redux Toolkit, Expo, Skia, Appium, Bitrise, etc.) for each respective project.

@@ -81,14 +81,42 @@ export const projects: Project[] = [
   
   // --- Mobile App Development ---
   {
-    title: "The Draft (Mobile Platform)",
+    title: "Sidekick (Me@Walmart)",
+    category: "Mobile App Development",
+    description: "Mobile solution within the Me@Walmart app that empowers store associates and team leads to efficiently manage shift goals, team preferences, and additional work tasks.",
+    bullets: [
+      "Streamlined daily planning, task assignment, and progress tracking, enhancing collaboration and productivity for in-store teams.",
+      "Implemented dynamic goal, associate, and additional work list components, enabling real-time data display and user interaction.",
+      "Built reusable UI widgets to streamline team preference management and integrated navigation flows using React Navigation.",
+      "Handled error states, loading skeletons, and accessibility features to ensure robust app behaviour."
+    ],
+    tags: ["React Native", "Redux", "React Navigation"],
+    links: {
+      live: "https://play.google.com/store/apps/details?id=com.walmart.squiggly&hl=en_IN"
+    },
+    featured: true,
+  },
+  {
+    title: "The Draft",
     category: "Mobile App Development",
     description: "A cross-platform social media application for jobseekers and posters.",
     bullets: [
-      "Implemented complex state management architecture using Redux and React Query.",
-      "Integrated Firebase for real-time updates and Keychain for secure storage.",
+      "Implemented state management with Redux and React Query, integrated Firebase for real-time updates, and used Keychain for secure storage.",
+      "Focused on performance optimization and media rendering with Fast Image and video libraries."
     ],
     tags: ["React Native", "Redux", "Firebase", "Mixpanel"],
+    links: {},
+    featured: false,
+  },
+  {
+    title: "Platform",
+    category: "Mobile App Development",
+    description: "A React Native boilerplate built to streamline and accelerate project setup for new client engagements.",
+    bullets: [
+      "Combined React Native with Redux Toolkit for state management, React Navigation for in-app routing, and React Hooks for state/lifecycle management.",
+      "Configured Bitrise and CircleCI for CI/CD with automated build notifications, code review, and Appium testing."
+    ],
+    tags: ["React Native", "Redux Toolkit", "Bitrise", "Appium"],
     links: {},
     featured: false,
   },
@@ -98,12 +126,58 @@ export const projects: Project[] = [
     description: "A free social application for golf enthusiasts to connect and share their passion.",
     bullets: [
       "Built using React Native CLI with Redux Toolkit for API integration.",
-      "Features deep linking, FCM/APNS push notifications, and Google/Apple auth.",
+      "Features deep linking, FCM/APNS push notifications, and Google/Apple auth."
     ],
     tags: ["React Native", "Redux Toolkit", "FCM"],
     links: {},
     featured: false,
   },
+  {
+    title: "Path Truck and Trailer",
+    category: "Mobile App Development",
+    description: "A navigation app for truck drivers focused on safety, efficiency, and profitability.",
+    bullets: [
+      "Integrated the Google Maps API for precise route planning and reliable map services.",
+      "Developed with TypeScript to ensure clean, maintainable code aligned with industry best practices."
+    ],
+    tags: ["React Native", "TypeScript", "Maps API"],
+    links: {},
+    featured: false,
+  },
+  {
+    title: "Suggaa",
+    category: "Mobile App Development",
+    description: "An online cab-aggregator service providing safe, comfortable rides for customers and earning opportunities for driver-partners.",
+    bullets: [
+      "Implemented Mixpanel for event tracking and integrated third-party packages alongside custom UI components.",
+      "Built complex UI screens using Skia and Reanimated within an Expo monorepo setup."
+    ],
+    tags: ["React Native", "Expo", "Skia", "Reanimated"],
+    links: {},
+    featured: false,
+  },
+  {
+    title: "VBN Official",
+    category: "Mobile App Development",
+    description: "An app enabling small businesses to exchange and generate leads within a network.",
+    bullets: [
+      "Built with React Native for a responsive user experience with statistics for recurring in-person meetups."
+    ],
+    tags: ["React Native"],
+    links: {},
+    featured: false,
+  },
+  {
+    title: "B2BDock",
+    category: "Mobile App Development",
+    description: "A platform helping retailers and brands manage orders, sales, inventory, and marketing.",
+    bullets: [
+      "Built with React Native and Redux for frontend development, and Node.js, Flask, and MongoDB for backend development."
+    ],
+    tags: ["React Native", "Redux", "Node.js", "MongoDB"],
+    links: {},
+    featured: false,
+  }
 ];
 
 export const blogPosts: BlogPost[] = [
