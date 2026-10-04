@@ -48,3 +48,14 @@ Updated the Mobile App Development section to align with the latest PDF resume, 
 - Ensured tags reflect the specific technical stacks (React Navigation, Redux Toolkit, Expo, Skia, Appium, Bitrise, etc.) for each respective project.
 - Added direct live App Store and Play Store tracking links to *Greenspace Golf*, *Path Truck and Trailer*, *Suggaa*, and *VBN Official*.
 
+## 2026-10-04 12:42 · Microsoft Clarity Analytics & Interaction Tracking
+
+Integrated Microsoft Clarity to capture visitor geolocation, session replays, click heatmaps, scroll depth, and interaction telemetry focused on recruiters and profile visitors.
+
+**Decisions**
+- Implemented `MicrosoftClarity` client component using `next/script` with `strategy="afterInteractive"`, configured for project ID `ysc70r044q`.
+- Created type-safe analytics helper module `src/lib/analytics.ts` (`trackClarityEvent`, `setClarityTag`, `identifyClarityUser`).
+- Added automatic capture for UTM parameters (`utm_source`, `utm_medium`, `utm_campaign`, `ref`) to identify recruiter sessions coming from links in resumes or emails.
+- Added event listeners for resume interactions (`.pdf` / resume link clicks), external app stores, GitHub, LinkedIn, Medium, and section anchor changes (`#about`, `#experience`, `#projects`, `#writing`, `#contact`).
+
+
