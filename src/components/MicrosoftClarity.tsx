@@ -139,9 +139,12 @@ export function MicrosoftClarity({
               t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
               y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
           })(window, document, "clarity", "script", "${activeProjectId}");
-          // Initialize cookieless mode by default to prevent non-essential tracking cookies
+          // Enable cookieless tracking mode via Clarity Consent API V2
           if (typeof window.clarity === "function") {
-            window.clarity("consent", ${cookiesAllowed ? "true" : "false"});
+            window.clarity("consentv2", {
+              ad_storage: "${cookiesAllowed ? "granted" : "denied"}",
+              analytics_storage: "${cookiesAllowed ? "granted" : "denied"}"
+            });
           }
         `,
       }}

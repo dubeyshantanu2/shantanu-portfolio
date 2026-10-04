@@ -3,6 +3,11 @@
  * Provides safe wrappers around the global window.clarity instance.
  */
 
+export interface ClarityConsentV2Options {
+  ad_storage?: "granted" | "denied";
+  analytics_storage?: "granted" | "denied";
+}
+
 declare global {
   interface Window {
     clarity?: (
@@ -67,15 +72,15 @@ export function identifyClarityUser(
 }
 
 /**
- * Sets cookie and consent preferences for Microsoft Clarity.
- * Passing `false` puts Clarity into cookieless tracking mode.
+ * Updates cookie and consent preferences using Microsoft Clarity Consent API V2.
+ * Setting `ad_storage: "denied"` and `analytics_storage: "denied"` enables cookieless tracking mode.
  *
- * @param hasConsent - Whether non-essential tracking cookies are permitted.
+ * @param options - Consent configuration options for ad and analytics storage.
  */
-export function setClarityConsent(hasConsent: boolean): void {
+export function setClarityConsentV2(options: ClarityConsentV2Options): void {
   if (typeof window !== "undefined" && typeof window.clarity === "function") {
     try {
-      window.clarity("consent", hasConsent);
+      window.clarity("consentv2", options);
     } catch {
       // Ignore errors if analytics is blocked
     }
