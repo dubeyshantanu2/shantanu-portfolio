@@ -76,21 +76,17 @@ export function MicrosoftClarity({
     };
 
     // 3. Scroll-based section view tracking using IntersectionObserver
-    const trackedSections = new Set<string>();
-    let currentSection = "";
+    const visitedSections = new Set<string>();
 
     const observer = new IntersectionObserver(
       (entries) => {
         entries.forEach((entry) => {
           if (entry.isIntersecting) {
             const id = entry.target.id;
-            if (id && id !== currentSection) {
-              currentSection = id;
-              setClarityTag("current_section", id);
-              if (!trackedSections.has(id)) {
-                trackedSections.add(id);
-                trackClarityEvent(`view_section_${id}`);
-              }
+            if (id && !visitedSections.has(id)) {
+              visitedSections.add(id);
+              setClarityTag("visited_sections", id);
+              trackClarityEvent(`view_section_${id}`);
             }
           }
         });
@@ -107,17 +103,20 @@ export function MicrosoftClarity({
     // 4. Hash navigation listener
     const handleHashChange = () => {
       const hash = window.location.hash.replace("#", "");
-      if (hash) {
-        setClarityTag("current_section", hash);
-        if (!trackedSections.has(hash)) {
-          trackedSections.add(hash);
-          trackClarityEvent(`view_section_${hash}`);
-        }
+      if (hash && !visitedSections.has(hash)) {
+        visitedSections.add(hash);
+        setClarityTag("visited_sections", hash);
+        trackClarityEvent(`view_section_${hash}`);
       }
     };
 
     window.addEventListener("click", handleGlobalClick, { passive: true });
     window.addEventListener("hashchange", handleHashChange);
+
+    // Initial hash check if user lands directly on anchor link
+    if (window.location.hash) {
+      handleHashChange();
+    }
 
     return () => {
       observer.disconnect();

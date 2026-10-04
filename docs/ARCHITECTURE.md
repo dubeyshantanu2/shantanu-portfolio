@@ -57,7 +57,7 @@ Integrated Microsoft Clarity to capture visitor geolocation, session replays, cl
 - Created type-safe analytics helper module `src/lib/analytics.ts` (`trackClarityEvent`, `setClarityTag`, `identifyClarityUser`, `setClarityConsent`).
 - Guarded script execution against local development pollution (`NODE_ENV === "production"` or explicit `NEXT_PUBLIC_CLARITY_PROJECT_ID`).
 - Enabled cookieless tracking by default via Clarity Consent API V2 (`window.clarity("consentv2", { ad_Storage: "denied", analytics_Storage: "denied" })`) to record sessions and interactions without non-essential tracking cookies.
-- Implemented `IntersectionObserver` to track section views (`#home`, `#skills`, `#projects`, `#writing`, `#experience`, `#about`) during viewport scrolling.
+- Implemented `IntersectionObserver` to emit timestamped `view_section_[id]` events and populate `visited_sections` multi-value tags during viewport scrolling.
 - Added automatic capture for UTM parameters (`utm_source`, `utm_medium`, `utm_campaign`, `ref`) to identify recruiter sessions coming from links in resumes or emails.
 - Added event listeners for resume interactions (`.pdf` / resume link clicks), external app stores, GitHub, LinkedIn, Medium, and email taps.
 
