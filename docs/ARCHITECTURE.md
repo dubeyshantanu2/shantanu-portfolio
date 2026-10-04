@@ -23,7 +23,7 @@ Built a fully static, single-page scroll portfolio with a dark terminal theme. D
 - Extracted OCR resume text into typed `src/data/content.ts` arrays/objects for V2 data ingestion.
 
 **TODOs**
-- [ ] User needs to upload the actual `resume.pdf` to the `public/` directory.
+- [x] Replaced placeholder with authentic `resume.pdf` in `public/` directory.
 - [ ] Finalize tweaks for V3.
 
 ## 2026-10-02 01:10 · Added Writing / Blog Section & Linked Medium Post
@@ -58,8 +58,10 @@ Integrated Microsoft Clarity to capture visitor geolocation, session replays, cl
 - Guarded script execution against local development pollution (`NODE_ENV === "production"` or explicit `NEXT_PUBLIC_CLARITY_PROJECT_ID`).
 - Enabled cookieless tracking by default via Clarity Consent API V2 (`window.clarity("consentv2", { ad_Storage: "denied", analytics_Storage: "denied" })`) to record sessions and interactions without non-essential tracking cookies.
 - Implemented `IntersectionObserver` to emit timestamped `view_section_[id]` events and populate `visited_sections` multi-value tags during viewport scrolling.
-- Added automatic capture for UTM parameters (`utm_source`, `utm_medium`, `utm_campaign`, `ref`) to identify recruiter sessions coming from links in resumes or emails.
-- Added event listeners for resume interactions (`.pdf` / resume link clicks), external app stores, GitHub, LinkedIn, Medium, and email taps.
+## 2026-10-04 14:31 · Replaced Resume PDF with Official Document
 
+Replaced placeholder PDF in `public/resume.pdf` with the authentic 3-page resume document.
 
-
+**Decisions**
+- Directly copied the uploaded PDF document to `public/resume.pdf` and verified static export copy in `out/resume.pdf`.
+- Verified Resume CTA in `Hero.tsx` links cleanly to `/resume.pdf`.

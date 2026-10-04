@@ -8,6 +8,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ## [Unreleased]
 
 ### Added
+- **Official Resume PDF**: Replaced the placeholder PDF in `public/resume.pdf` with the full authentic 3-page resume document.
 - **React Native Portfolio Update**: Added comprehensive list of React Native projects from the latest resume to the Mobile App Development category.
 - **Walmart Integration**: Added *Sidekick (Me@Walmart)* as a featured project with direct Play Store link.
 - **New Mobile Projects**: Added *The Draft*, *Platform*, *Greenspace Golf*, *Path Truck and Trailer*, *Suggaa*, *VBN Official*, and *B2BDock*.
