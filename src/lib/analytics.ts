@@ -4,8 +4,8 @@
  */
 
 export interface ClarityConsentV2Options {
-  ad_storage?: "granted" | "denied";
-  analytics_storage?: "granted" | "denied";
+  ad_Storage?: "granted" | "denied";
+  analytics_Storage?: "granted" | "denied";
 }
 
 declare global {
@@ -73,9 +73,9 @@ export function identifyClarityUser(
 
 /**
  * Updates cookie and consent preferences using Microsoft Clarity Consent API V2.
- * Setting `ad_storage: "denied"` and `analytics_storage: "denied"` enables cookieless tracking mode.
+ * Setting `ad_Storage: "denied"` and `analytics_Storage: "denied"` enables cookieless tracking mode.
  *
- * @param options - Consent configuration options for ad and analytics storage.
+ * @param options - Consent configuration options with case-sensitive keys (ad_Storage, analytics_Storage).
  */
 export function setClarityConsentV2(options: ClarityConsentV2Options): void {
   if (typeof window !== "undefined" && typeof window.clarity === "function") {

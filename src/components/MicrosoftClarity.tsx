@@ -142,8 +142,8 @@ export function MicrosoftClarity({
           // Enable cookieless tracking mode via Clarity Consent API V2
           if (typeof window.clarity === "function") {
             window.clarity("consentv2", {
-              ad_storage: "${cookiesAllowed ? "granted" : "denied"}",
-              analytics_storage: "${cookiesAllowed ? "granted" : "denied"}"
+              ad_Storage: "${cookiesAllowed ? "granted" : "denied"}",
+              analytics_Storage: "${cookiesAllowed ? "granted" : "denied"}"
             });
           }
         `,
