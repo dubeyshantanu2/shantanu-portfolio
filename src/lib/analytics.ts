@@ -6,7 +6,7 @@
 declare global {
   interface Window {
     clarity?: (
-      action: "init" | "event" | "set" | "identify" | "consent",
+      action: "init" | "event" | "set" | "identify" | "consent" | "consentv2",
       ...args: unknown[]
     ) => void;
   }
@@ -62,6 +62,22 @@ export function identifyClarityUser(
       window.clarity("identify", customId, customSessionId, customPageId, friendlyName);
     } catch {
       // Ignore errors if analytics is blocked by ad-blocker
+    }
+  }
+}
+
+/**
+ * Sets cookie and consent preferences for Microsoft Clarity.
+ * Passing `false` puts Clarity into cookieless tracking mode.
+ *
+ * @param hasConsent - Whether non-essential tracking cookies are permitted.
+ */
+export function setClarityConsent(hasConsent: boolean): void {
+  if (typeof window !== "undefined" && typeof window.clarity === "function") {
+    try {
+      window.clarity("consent", hasConsent);
+    } catch {
+      // Ignore errors if analytics is blocked
     }
   }
 }
