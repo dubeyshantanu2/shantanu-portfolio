@@ -14,8 +14,8 @@ export const profile: Profile = {
 
 export const skills: SkillGroup[] = [
   {
-    category: "Mobile & Frontend",
-    items: ["React Native", "TypeScript", "Redux", "Expo", "Reanimated", "Tailwind CSS", "GraphQL"],
+    category: "Mobile Frontend",
+    items: ["React Native", "TypeScript", "Redux Toolkit", "Expo", "Reanimated", "Skia", "Jotai", "React Query", "Tailwind CSS"],
   },
   {
     category: "AI & Machine Learning",

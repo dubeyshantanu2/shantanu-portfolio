@@ -13,23 +13,23 @@
 }
 
 :root {
-  --background: #fafafa;
-  --foreground: #171717;
-  --accent: #2563eb;
-  --accent-dim: #dbeafe;
+  --background: #fafaf8;
+  --foreground: #0d0d0c;
+  --accent: #FF5500;
+  --accent-dim: #f37021;
   --surface: #ffffff;
   --surface-hover: #f3f4f6;
   --border: #e5e7eb;
 }
 
 .dark {
-  --background: #09090b;
-  --foreground: #e4e4e7;
-  --accent: #10b981; /* Terminal green */
-  --accent-dim: rgba(16, 185, 129, 0.1);
-  --surface: #18181b;
-  --surface-hover: #27272a;
-  --border: #27272a;
+  --background: #0d0d0c;
+  --foreground: #fafaf8;
+  --accent: #FF5500;
+  --accent-dim: #f37021;
+  --surface: #141413;
+  --surface-hover: #1f1f1d;
+  --border: #2a2a28;
 }
 
 body {
