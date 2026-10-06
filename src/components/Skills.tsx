@@ -20,7 +20,7 @@ export function Skills() {
                   key={i}
                   className="group/item px-3 py-1.5 bg-black/5 dark:bg-white/5 border border-black/5 dark:border-white/10 text-foreground text-sm font-mono rounded-md hover:bg-[var(--accent)] hover:text-white dark:hover:text-black transition-colors"
                 >
-                  <span className="text-green-600 dark:text-green-400 group-hover/item:text-white dark:group-hover/item:text-black transition-colors">"{item}"</span>
+                  <span className="text-green-700 dark:text-green-400 group-hover/item:text-white dark:group-hover/item:text-black transition-colors">"{item}"</span>
                 </span>
               ))}
             </div>

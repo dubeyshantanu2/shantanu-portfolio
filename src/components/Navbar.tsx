@@ -93,7 +93,7 @@ export function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`p-4 transition-colors ${
                     activeSection === link.href.substring(1)
-                      ? "text-accent bg-accent-dim font-bold"
+                      ? "text-orange-700 dark:text-[var(--accent)] bg-[var(--accent-dim)] font-bold"
                       : "text-foreground/70"
                   }`}
                 >

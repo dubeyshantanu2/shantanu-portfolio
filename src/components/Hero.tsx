@@ -174,7 +174,7 @@ export function Hero() {
               <span className="font-mono text-xs text-slate-600 dark:text-slate-400">DOCKER CONTAINERS</span>
             </div>
             <motion.div 
-              animate={{ opacity: [1, 0.3, 1] }} 
+              animate={shouldReduceMotion ? {} : { opacity: [1, 0.3, 1] }} 
               transition={{ duration: 1.5, repeat: Infinity }}
               className="w-2 h-2 rounded-full bg-green-500 shadow-[0_0_8px_#22c55e]" 
             />
