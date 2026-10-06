@@ -23,7 +23,7 @@ const IsometricGrid = () => {
         }}
         initial={{ opacity: 0 }}
         animate={{ opacity: 1, ...(shouldReduceMotion ? {} : { backgroundPosition: ['0px 0px', '64px 64px'] }) }}
-        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+        transition={shouldReduceMotion ? { duration: 1 } : { duration: 10, repeat: Infinity, ease: "linear" }}
       >
       {/* Grid Particles traveling along lines */}
       <motion.div 
