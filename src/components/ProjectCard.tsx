@@ -8,7 +8,7 @@ export function ProjectCard({ project }: { project: Project }) {
       {/* Background Glow on hover */}
       <div className="absolute inset-0 bg-gradient-to-br from-[var(--accent)]/0 to-[var(--accent)]/0 group-hover:from-[var(--accent)]/5 group-hover:to-transparent transition-colors duration-500 pointer-events-none" />
       
-      <div className="relative z-10">
+      <div className="relative z-10 flex flex-col h-full">
         <p className="font-mono text-xs text-[var(--foreground)]/50 mb-4">
           <span className="text-slate-400 dark:text-slate-500">/**</span><br/>
           <span className="text-slate-400 dark:text-slate-500"> * @category {project.category}</span><br/>
