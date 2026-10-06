@@ -59,7 +59,7 @@ export function Section({ id, title, children, className = "" }: SectionProps) {
         )}
         {children}
         {title && (
-          <h2 className="text-3xl md:text-4xl font-bold font-mono mt-12 text-slate-400 dark:text-slate-500">
+          <h2 className="text-3xl md:text-4xl font-bold font-mono mt-12">
             {'}'}
           </h2>
         )}

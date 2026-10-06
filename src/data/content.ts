@@ -27,7 +27,7 @@ export const skills: SkillGroup[] = [
   },
   {
     category: "Tools & DevOps",
-    items: ["Docker", "Fly.io", "GitHub Actions", "Bitrise", "Jest", "Mixpanel"],
+    items: ["Docker", "Fly.io", "GitHub Actions", "Bitrise", "Jest", "Mixpanel", "Sentry"],
   },
 ];
 
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     ],
     tags: ["React Native", "Redux Toolkit", "FCM"],
     links: {
-      live: "https://apps.apple.com/us/app/greenspace-golf/id1632177881"
+      live: "https://www.greenspacegolf.com/"
     },
     featured: false,
   },
