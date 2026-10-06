@@ -87,6 +87,7 @@ const TypewriterText = ({ text, delay = 0 }: { text: string, delay?: number }) =
 };
 
 export function Hero() {
+  const shouldReduceMotion = useReducedMotion();
   return (
     <section id="home" className="relative w-full min-h-[100vh] bg-[#fdfdfd] dark:bg-[#050505] text-slate-900 dark:text-slate-200 overflow-hidden flex items-center justify-center transition-colors duration-500">
       
@@ -143,7 +144,7 @@ export function Hero() {
       </div>
 
       {/* Floating 3D Panels */}
-      <div className="absolute inset-0 z-10 pointer-events-none perspective-[1000px]">
+      <div aria-hidden="true" className="absolute inset-0 z-10 pointer-events-none perspective-[1000px]">
         
         {/* Code Editor Panel */}
         <GlassPanel delay={0.2} duration={5} floatOffset={12} className="top-[15%] left-[5%] lg:left-[10%] w-[340px] rotate-[-5deg] rotate-y-[10deg]">
@@ -189,7 +190,7 @@ export function Hero() {
                 stroke="var(--accent)" 
                 strokeWidth="2" 
                 strokeDasharray="8 8"
-                animate={{ strokeDashoffset: [0, -32] }}
+                animate={shouldReduceMotion ? {} : { strokeDashoffset: [0, -32] }}
                 transition={{ duration: 1.5, repeat: Infinity, ease: "linear" }}
               />
             </svg>
@@ -197,7 +198,7 @@ export function Hero() {
             {/* Animated Data Packets */}
             <motion.div 
               className="absolute w-2 h-2 bg-blue-400 rounded-full shadow-[0_0_10px_#3b82f6]"
-              animate={{ 
+              animate={shouldReduceMotion ? { x: 150, y: 32, opacity: 1 } : { 
                 x: [50, 150, 250], 
                 y: [64, 32, 64],
                 opacity: [0, 1, 0]
@@ -219,7 +220,7 @@ export function Hero() {
               <Box size={20} className="text-[var(--accent)] drop-shadow-[0_0_8px_rgba(255,85,0,0.5)]" />
             </motion.div>
             <motion.div 
-              animate={{ rotateY: 360 }}
+              animate={shouldReduceMotion ? {} : { rotateY: 360 }}
               transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
               className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-16 h-16 rounded-full bg-purple-500/10 dark:bg-purple-500/20 border border-purple-500/30 dark:border-purple-500/50 flex items-center justify-center backdrop-blur-md"
             >
