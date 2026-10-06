@@ -1,28 +1,30 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { motion, useReducedMotion } from "framer-motion";
 import { profile } from "@/data/content";
 import { Code2, Server, MessageSquare, Box } from "lucide-react";
 import { useEffect, useState } from "react";
 
-const IsometricGrid = () => (
-  <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden pointer-events-none perspective-[2000px]">
-    {/* 3D Rotated Plane */}
-    <motion.div 
-      className="absolute w-[200vw] h-[200vh] border-[var(--accent)]/20"
-      style={{
-        backgroundImage: `
-          linear-gradient(to right, rgba(255, 85, 0, 0.1) 1px, transparent 1px),
-          linear-gradient(to bottom, rgba(255, 85, 0, 0.1) 1px, transparent 1px)
-        `,
-        backgroundSize: '4rem 4rem',
-        transform: 'rotateX(65deg) rotateZ(45deg) translateY(-20%)',
-        transformOrigin: 'center center'
-      }}
-      initial={{ opacity: 0 }}
-      animate={{ opacity: 1, backgroundPosition: ['0px 0px', '64px 64px'] }}
-      transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
-    >
+const IsometricGrid = () => {
+  const shouldReduceMotion = useReducedMotion();
+  return (
+    <div className="absolute inset-0 z-0 flex items-center justify-center overflow-hidden pointer-events-none perspective-[2000px]">
+      {/* 3D Rotated Plane */}
+      <motion.div 
+        className="absolute w-[200vw] h-[200vh] border-[var(--accent)]/20"
+        style={{
+          backgroundImage: `
+            linear-gradient(to right, rgba(255, 85, 0, 0.1) 1px, transparent 1px),
+            linear-gradient(to bottom, rgba(255, 85, 0, 0.1) 1px, transparent 1px)
+          `,
+          backgroundSize: '4rem 4rem',
+          transform: 'rotateX(65deg) rotateZ(45deg) translateY(-20%)',
+          transformOrigin: 'center center'
+        }}
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1, ...(shouldReduceMotion ? {} : { backgroundPosition: ['0px 0px', '64px 64px'] }) }}
+        transition={{ duration: 10, repeat: Infinity, ease: "linear" }}
+      >
       {/* Grid Particles traveling along lines */}
       <motion.div 
         className="absolute top-1/2 left-0 w-16 h-0.5 bg-gradient-to-r from-transparent to-[var(--accent)] blur-[1px]"
@@ -36,12 +38,13 @@ const IsometricGrid = () => (
       />
       
       {/* Glowing Nodes on the grid */}
-      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-[var(--accent)]/20 rounded-full blur-3xl animate-pulse" />
-      <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-[100px] animate-pulse" style={{ animationDelay: '2s' }} />
-      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-[var(--accent)]/10 rounded-full blur-[80px] animate-pulse" style={{ animationDelay: '1s' }} />
+      <div className="absolute top-1/4 left-1/4 w-32 h-32 bg-[var(--accent)]/20 rounded-full blur-3xl motion-safe:animate-pulse" />
+      <div className="absolute top-1/2 left-1/2 w-64 h-64 bg-blue-500/10 dark:bg-blue-500/20 rounded-full blur-[100px] motion-safe:animate-pulse" style={{ animationDelay: '2s' }} />
+      <div className="absolute bottom-1/4 right-1/4 w-48 h-48 bg-[var(--accent)]/10 rounded-full blur-[80px] motion-safe:animate-pulse" style={{ animationDelay: '1s' }} />
     </motion.div>
-  </div>
-);
+    </div>
+  );
+};
 
 const GlassPanel = ({ children, className = "", delay = 0, floatOffset = 15, duration = 6 }: { children: React.ReactNode, className?: string, delay?: number, floatOffset?: number, duration?: number }) => (
   <motion.div 
@@ -80,7 +83,7 @@ const TypewriterText = ({ text, delay = 0 }: { text: string, delay?: number }) =
     return () => clearTimeout(timer);
   }, [text, delay]);
 
-  return <span>{displayText}<span className="animate-pulse">_</span></span>;
+  return <span>{displayText}<span className="motion-safe:animate-pulse">_</span></span>;
 };
 
 export function Hero() {
@@ -103,7 +106,7 @@ export function Hero() {
             transition={{ delay: 0.5, duration: 0.5 }}
             className="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 text-[var(--accent)] text-sm font-mono mb-8 backdrop-blur-md"
           >
-            <span className="w-2 h-2 rounded-full bg-[var(--accent)] animate-pulse shadow-[0_0_8px_var(--accent)]" />
+            <span className="w-2 h-2 rounded-full bg-[var(--accent)] motion-safe:animate-pulse shadow-[0_0_8px_var(--accent)]" />
             ENGINEERING COMPLEX SYSTEMS
           </motion.div>
           
@@ -143,7 +146,7 @@ export function Hero() {
       <div className="absolute inset-0 z-10 pointer-events-none perspective-[1000px]">
         
         {/* Code Editor Panel */}
-        <GlassPanel delay={0.2} duration={5} floatOffset={12} className="top-[15%] left-[5%] lg:left-[10%] w-[340px] rotate-[-5deg] rotateY-[10deg]">
+        <GlassPanel delay={0.2} duration={5} floatOffset={12} className="top-[15%] left-[5%] lg:left-[10%] w-[340px] rotate-[-5deg] rotate-y-[10deg]">
           <div className="flex items-center gap-2 mb-4">
             <Code2 size={16} className="text-blue-500 dark:text-blue-400" />
             <span className="font-mono text-xs text-slate-600 dark:text-slate-400">api_gateway.ts</span>
@@ -163,7 +166,7 @@ export function Hero() {
         </GlassPanel>
 
         {/* Architecture Panel */}
-        <GlassPanel delay={0.4} duration={7} floatOffset={18} className="bottom-[15%] right-[5%] lg:right-[10%] w-[400px] rotate-[5deg] rotateY-[-10deg]">
+        <GlassPanel delay={0.4} duration={7} floatOffset={18} className="bottom-[15%] right-[5%] lg:right-[10%] w-[400px] rotate-[5deg] rotate-y-[-10deg]">
           <div className="flex items-center justify-between mb-4">
             <div className="flex items-center gap-2">
               <Box size={16} className="text-blue-500" />

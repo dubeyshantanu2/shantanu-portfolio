@@ -48,7 +48,7 @@ export function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#home" className="text-xl font-bold font-mono tracking-tighter">
-          &gt; shantanu<span className="text-accent animate-pulse">_</span>
+          &gt; shantanu<span className="text-accent motion-safe:animate-pulse">_</span>
         </a>
 
         {/* Desktop Nav */}
