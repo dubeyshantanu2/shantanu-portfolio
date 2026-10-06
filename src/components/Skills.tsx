@@ -24,9 +24,9 @@ export function Skills() {
                 </span>
               ))}
             </div>
-            <h3 className="text-lg font-mono mt-6 text-foreground">
+            <div aria-hidden="true" className="text-lg font-mono mt-6 text-foreground">
               {'}'}
-            </h3>
+            </div>
           </div>
         ))}
       </div>

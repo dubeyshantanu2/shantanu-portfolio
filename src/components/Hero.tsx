@@ -130,7 +130,7 @@ export function Hero() {
             transition={{ delay: 0.9, duration: 0.5 }}
             className="flex flex-wrap gap-5 justify-center items-center"
           >
-            <a href="#projects" className="bg-transparent border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white px-8 py-3.5 rounded-full font-medium tracking-wide transition-all duration-300 shadow-[0_0_15px_rgba(255,85,0,0.15)] dark:shadow-[0_0_15px_rgba(255,85,0,0.3)] hover:shadow-[0_0_30px_rgba(255,85,0,0.4)] dark:hover:shadow-[0_0_30px_rgba(255,85,0,0.6)]">
+            <a href="#projects" className="bg-transparent border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white dark:hover:text-black px-8 py-3.5 rounded-full font-medium tracking-wide transition-all duration-300 shadow-[0_0_15px_rgba(255,85,0,0.15)] dark:shadow-[0_0_15px_rgba(255,85,0,0.3)] hover:shadow-[0_0_30px_rgba(255,85,0,0.4)] dark:hover:shadow-[0_0_30px_rgba(255,85,0,0.6)]">
               VIEW PROJECTS
             </a>
             <a href={`mailto:${profile.email}`} className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 text-slate-900 dark:text-white px-8 py-3.5 rounded-full font-medium tracking-wide transition-all duration-300 backdrop-blur-sm">
