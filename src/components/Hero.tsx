@@ -51,7 +51,7 @@ const GlassPanel = ({ children, className = "", delay = 0, floatOffset = 15, dur
     initial={{ opacity: 0, y: 50 }}
     animate={{ opacity: 1, y: 0 }}
     transition={{ duration: 0.8, delay, type: "spring", bounce: 0.4 }}
-    className={`absolute pointer-events-none ${className}`}
+    className={`absolute pointer-events-auto ${className}`}
   >
     <motion.div 
       animate={{ y: [0, -floatOffset, 0] }}
@@ -128,7 +128,7 @@ export function Hero() {
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ delay: 0.9, duration: 0.5 }}
-            className="flex flex-wrap gap-5 justify-center items-center"
+            className="flex flex-wrap gap-5 justify-center items-center relative z-30"
           >
             <a href="#projects" className="bg-transparent border border-[var(--accent)] text-[var(--accent)] hover:bg-[var(--accent)] hover:text-white dark:hover:text-black px-8 py-3.5 rounded-full font-medium tracking-wide transition-all duration-300 shadow-[0_0_15px_rgba(255,85,0,0.15)] dark:shadow-[0_0_15px_rgba(255,85,0,0.3)] hover:shadow-[0_0_30px_rgba(255,85,0,0.4)] dark:hover:shadow-[0_0_30px_rgba(255,85,0,0.6)]">
               VIEW PROJECTS

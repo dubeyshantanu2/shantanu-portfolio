@@ -72,6 +72,6 @@ Fixed the "HIRE ME" button in `Hero.tsx` so clicking reliably opens the email cl
 
 **Decisions**
 - Removed `pointer-events-none` wrapper on Hero main content container to ensure standard click event hit-testing across all devices.
-- Changed `GlassPanel` class from `pointer-events-auto` to `pointer-events-none` so decorative background 3D panels cannot capture or block pointer events.
+- Elevated CTA buttons layer to `relative z-30` above lower-level `z-10` floating panels while preserving `GlassPanel` `pointer-events-auto` for hover and scaling micro-interactions.
 - Added explicit `onClick` fallback (`window.location.href = mailto:...`) and `cursor-pointer` to the `HIRE ME` anchor tag to guarantee consistent email dispatch matching `Contact.tsx`.
 
