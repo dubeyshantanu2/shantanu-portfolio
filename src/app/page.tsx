@@ -16,8 +16,8 @@ export default function Home() {
         <Hero />
         <Skills />
         <ProjectsGrid />
-        <BlogSection />
         <ExperienceTimeline />
+        <BlogSection />
         <About />
         <Contact />
       </main>

@@ -14,8 +14,8 @@ export const profile: Profile = {
 
 export const skills: SkillGroup[] = [
   {
-    category: "Mobile & Frontend",
-    items: ["React Native", "TypeScript", "Redux", "Expo", "Reanimated", "Tailwind CSS", "GraphQL"],
+    category: "Mobile Frontend",
+    items: ["React Native", "TypeScript", "Redux Toolkit", "Expo", "Reanimated", "Skia", "Jotai", "React Query", "Tailwind CSS"],
   },
   {
     category: "AI & Machine Learning",
@@ -27,7 +27,7 @@ export const skills: SkillGroup[] = [
   },
   {
     category: "Tools & DevOps",
-    items: ["Docker", "Fly.io", "GitHub Actions", "Bitrise", "Jest", "Mixpanel"],
+    items: ["Docker", "Fly.io", "GitHub Actions", "Bitrise", "Jest", "Mixpanel", "Sentry"],
   },
 ];
 
@@ -130,7 +130,7 @@ export const projects: Project[] = [
     ],
     tags: ["React Native", "Redux Toolkit", "FCM"],
     links: {
-      live: "https://apps.apple.com/us/app/greenspace-golf/id1632177881"
+      live: "https://www.greenspacegolf.com/"
     },
     featured: false,
   },

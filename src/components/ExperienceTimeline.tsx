@@ -13,19 +13,26 @@ export function ExperienceTimeline() {
             </div>
             
             {/* Content box */}
-            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-lg bg-surface border border-border">
-              <div className="flex flex-col md:flex-row justify-between mb-2 md:items-center">
-                <h3 className="font-bold text-xl">{exp.role}</h3>
-                <time className="font-mono text-sm text-accent">{exp.period}</time>
+            <div className="w-[calc(100%-4rem)] md:w-[calc(50%-2.5rem)] p-6 rounded-xl bg-surface border border-border group-hover:border-[var(--accent)]/50 transition-colors relative overflow-hidden">
+              <div className="absolute inset-0 bg-gradient-to-r from-[var(--accent)]/0 to-[var(--accent)]/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none" />
+              <div className="relative z-10">
+                <div className="mb-4 font-mono text-xs text-foreground/50">
+                  <span className="text-purple-600 dark:text-purple-400">await</span> <span className="text-blue-600 dark:text-blue-400">Experience</span>.load(
+                  <span className="text-green-700 dark:text-green-400">"{exp.company}"</span>)
+                </div>
+                <div className="flex flex-col md:flex-row justify-between mb-2 md:items-center">
+                  <h3 className="font-bold text-xl group-hover:text-[var(--accent)] transition-colors">{exp.role}</h3>
+                  <time className="font-mono text-sm text-[var(--accent)]">{exp.period}</time>
+                </div>
+                <div className="text-foreground/70 mb-4 font-mono text-sm">
+                  {exp.location}
+                </div>
+                <ul className="list-disc list-inside text-foreground/60 space-y-2 text-sm">
+                  {exp.bullets.map((bullet, i) => (
+                    <li key={i} className="leading-relaxed">{bullet}</li>
+                  ))}
+                </ul>
               </div>
-              <div className="text-foreground/70 mb-4 font-mono text-sm">
-                {exp.company} &bull; {exp.location}
-              </div>
-              <ul className="list-disc list-inside text-foreground/60 space-y-2 text-sm">
-                {exp.bullets.map((bullet, i) => (
-                  <li key={i}>{bullet}</li>
-                ))}
-              </ul>
             </div>
           </div>
         ))}

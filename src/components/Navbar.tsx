@@ -9,8 +9,8 @@ const NAV_LINKS = [
   { name: "Home", href: "#home" },
   { name: "Skills", href: "#skills" },
   { name: "Projects", href: "#projects" },
-  { name: "Writing", href: "#writing" },
   { name: "Experience", href: "#experience" },
+  { name: "Writing", href: "#writing" },
   { name: "About", href: "#about" },
 ];
 
@@ -48,7 +48,7 @@ export function Navbar() {
     >
       <div className="max-w-6xl mx-auto px-6 h-16 flex items-center justify-between">
         <a href="#home" className="text-xl font-bold font-mono tracking-tighter">
-          &gt; shantanu<span className="text-accent animate-pulse">_</span>
+          &gt; shantanu<span className="text-accent motion-safe:animate-pulse">_</span>
         </a>
 
         {/* Desktop Nav */}
@@ -93,7 +93,7 @@ export function Navbar() {
                   onClick={() => setIsOpen(false)}
                   className={`p-4 transition-colors ${
                     activeSection === link.href.substring(1)
-                      ? "text-accent bg-accent-dim font-bold"
+                      ? "text-orange-700 dark:text-[var(--accent)] bg-[var(--accent-dim)] font-bold"
                       : "text-foreground/70"
                   }`}
                 >
