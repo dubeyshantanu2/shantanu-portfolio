@@ -65,3 +65,13 @@ Replaced placeholder PDF in `public/resume.pdf` with the authentic 3-page resume
 **Decisions**
 - Directly copied the uploaded PDF document to `public/resume.pdf` and verified static export copy in `out/resume.pdf`.
 - Verified Resume CTA in `Hero.tsx` links cleanly to `/resume.pdf`.
+
+## 2026-10-07 21:08 · Fix Hero HIRE ME Button Email Action
+
+Fixed the "HIRE ME" button in `Hero.tsx` so clicking reliably opens the email client without modifying the visual layout or button placement.
+
+**Decisions**
+- Removed `pointer-events-none` wrapper on Hero main content container to ensure standard click event hit-testing across all devices.
+- Elevated CTA buttons layer to `relative z-30` above lower-level `z-10` floating panels while preserving `GlassPanel` `pointer-events-auto` for hover and scaling micro-interactions.
+- Relied on native `href="mailto:..."` with `cursor-pointer` (matching `Contact.tsx`) without redundant `onClick` handlers, avoiding duplicate mail client invocations or browser throttling.
+
