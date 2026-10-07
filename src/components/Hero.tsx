@@ -135,9 +135,6 @@ export function Hero() {
             </a>
             <a 
               href={`mailto:${profile.email}`} 
-              onClick={() => {
-                window.location.href = `mailto:${profile.email}`;
-              }}
               className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 text-slate-900 dark:text-white px-8 py-3.5 rounded-full font-medium tracking-wide transition-all duration-300 backdrop-blur-sm cursor-pointer"
             >
               HIRE ME
