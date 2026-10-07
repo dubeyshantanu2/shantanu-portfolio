@@ -92,4 +92,5 @@ Updated `experiences` in `src/data/content.ts` to reflect the complete 7+ year p
 - Added missing historical roles: `Navaratan Technologies` (Associate Software Developer, Sep 2021 – May 2022) and `B2BDock` (Application Developer, Oct 2019 – Sep 2021).
 - Expanded bullet points across all roles (LangGraph orchestration, Supabase pgvector hybrid RAG, Forward Deployed Engineer responsibilities, enterprise CRQ workflows).
 - Resolved JSX entity quote escaping in `ExperienceTimeline.tsx`.
+- Synchronized `public/resume.md` text with `public/resume.pdf` to ensure 100% content parity across markdown and PDF formats.
 
