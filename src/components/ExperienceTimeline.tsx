@@ -18,7 +18,7 @@ export function ExperienceTimeline() {
               <div className="relative z-10">
                 <div className="mb-4 font-mono text-xs text-foreground/50">
                   <span className="text-purple-600 dark:text-purple-400">await</span> <span className="text-blue-600 dark:text-blue-400">Experience</span>.load(
-                  <span className="text-green-700 dark:text-green-400">"{exp.company}"</span>)
+                  <span className="text-green-700 dark:text-green-400">&quot;{exp.company}&quot;</span>)
                 </div>
                 <div className="flex flex-col md:flex-row justify-between mb-2 md:items-center">
                   <h3 className="font-bold text-xl group-hover:text-[var(--accent)] transition-colors">{exp.role}</h3>

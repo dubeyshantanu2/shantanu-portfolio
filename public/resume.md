@@ -2,18 +2,19 @@
 Bengaluru, Karnataka, India | +91 9455150010 | dubeyshantanu2@gmail.com | linkedin.com/in/shantanu-dubey-6709b711a | github.com/dubeyshantanu2
 
 ## SUMMARY
-Software engineer with 7+ years building React Native applications for iOS and Android across startups and enterprise platforms. Skilled in TypeScript/JavaScript, Redux, API integration, and automated testing (Jest, RNTL), with additional experience in Python and applied machine learning (XGBoost, Isolation Forest), and recent work directing LLM coding agents to build production systems under a structured spec-and-review process.
+Software engineer with 7+ years building scalable production systems across startups and enterprise platforms, specializing in Applied AI, Agentic Workflows, and high-throughput Python backends. Skilled in multi-agent orchestration (LangGraph), hybrid RAG retrieval (pgvector), strict schema validation (Pydantic), and applied machine learning (XGBoost, Isolation Forest), with a proven foundation in TypeScript/JavaScript, React Native, automated testing (Jest), and enterprise change governance.
 
 ## CORE COMPETENCIES
-React Native • Redux • TypeScript / JavaScript • AI Agent Orchestration • LLM Prompt Engineering • Python & asyncio • Machine Learning (XGBoost, Isolation Forest) • RESTful APIs • CI/CD & Deployment • Automated Testing (Jest)
+AI Agent Orchestration (LangGraph) • LLM Prompt Engineering & Evals • Hybrid RAG (pgvector) • Pydantic Schema Enforcement • Python & asyncio • Machine Learning (XGBoost, Isolation Forest) • React Native • TypeScript / JavaScript • RESTful & WebSocket APIs • Docker & Fly.io • CI/CD & Automated Testing (Jest, DeepEval)
 
 ## WORK EXPERIENCE
 **Software Engineer — AI-Directed Systems Engineering (Independent Contract)**
 *Mar 2026 – Present | Remote*
-- Design and direct the implementation of production systems using LLM coding agents as the primary build layer: author the technical specification and architecture decisions myself, then direct agents through implementation, debugging, and documentation under a defined review process.
-- Built a repeatable engineering pipeline — specification → architecture decision record → implementation → debug report → QA report → pull request — with a human review gate at every stage, applied across a portfolio of real-time market-data and signal-processing systems.
-- Delivered on Python 3.11 / asyncio with WebSocket and REST APIs, Supabase/PostgreSQL persistence, Redis pub/sub, and token-bucket rate governance; deployed via Docker on Fly.io.
-- Specified and shipped an XGBoost trade-outcome classifier using walk-forward validation, and an unsupervised Isolation Forest anomaly-detection overlay with drift monitoring.
+- Architect and direct production multi-agent systems using LangGraph and Python 3.11 asyncio: author technical specifications and state graphs, deploying cyclical workflows with Human-in-the-Loop (HITL) checkpoints and PostgreSQL state persistence.
+- Built a repeatable engineering pipeline — specification → architecture decision record → implementation → debug report → automated eval gate → pull request — backed by DeepEval and Langfuse tracing to monitor token costs, latency (p95 < 650ms), and prevent model regressions.
+- Engineered a Hybrid RAG retrieval pipeline using Supabase pgvector and PostgreSQL full-text search with Reciprocal Rank Fusion (RRF) and strict Pydantic v2 schema enforcement, achieving sub-150ms semantic search with zero JSON extraction hallucinations.
+- Delivered high-throughput asynchronous services on Python 3.11 with WebSocket and REST APIs, Redis pub/sub, token-bucket rate governance, and multi-stage Docker deployments on Fly.io.
+- Specified and shipped an XGBoost trade-outcome classifier using walk-forward validation, SHAP feature attributions, and an unsupervised Isolation Forest anomaly-detection overlay with drift monitoring.
 
 **Software Developer 3 — Walmart Global Tech**
 *Dec 2024 – Mar 2026 | Bengaluru, India*
@@ -79,8 +80,8 @@ A platform helping retailers and brands manage orders, sales, inventory, and mar
 Visvesvaraya Technological University
 
 ## TECHNICAL SKILLS
-- **Mobile & Frontend**: React Native, TypeScript, JavaScript, Redux, Expo SDK, React Navigation, GraphQL, JSON, Reanimated & Gesture Handler, Skia, CSS, Tailwind CSS, Material UI, Storybook
-- **AI & Machine Learning**: LLM Orchestration, Prompt Engineering, Claude API, OpenAI SDK, XGBoost, Isolation Forest
-- **Backend & Data**: Python 3.11, PostgreSQL, Supabase, SQLite, Redis, RESTful APIs, WebSockets, Pandas, NumPy
-- **Tools & Platforms**: Xcode, Android Studio SDK, Flipper, Jest, TestFlight, Bitrise, GitHub Actions, Git flow, Yarn, Figma, Google API, Mixpanel, Discord API, Visual Studio
-- **Infrastructure & Collaboration**: Docker, Fly.io, Confluence, Trello, Slack
+- **AI & Agentic Systems**: LangGraph, Multi-Agent Orchestration, Human-in-the-Loop (HITL), Hybrid RAG, pgvector, Pydantic v2, Instructor, Prompt Engineering, Claude API, OpenAI SDK, LLM Observability & Evals (Langfuse, DeepEval)
+- **Machine Learning & Analytics**: XGBoost, Isolation Forest, Walk-Forward Validation, SHAP Feature Attribution, Scikit-Learn, Pandas, NumPy
+- **Backend & Systems**: Python 3.11, asyncio, FastAPI, PostgreSQL, Supabase, Redis Pub/Sub, RESTful APIs, WebSockets, Docker, Fly.io
+- **Mobile & Frontend**: React Native, TypeScript, JavaScript, Redux, React Navigation, GraphQL, JSON, Reanimated & Gesture Handler, Skia, CSS, Tailwind CSS, Material UI, Storybook
+- **Tools, CI/CD & Platforms**: Xcode, Android Studio SDK, Jest, TestFlight, Bitrise, GitHub Actions, Git flow, Yarn, Figma, Mixpanel, Flipper
