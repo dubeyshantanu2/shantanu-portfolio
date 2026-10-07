@@ -84,3 +84,12 @@ Removed the "HIRE ME" button from `Hero.tsx` and placed the "VIEW RESUME" button
 - Promoted "VIEW RESUME" from inline text link to the secondary pill button (`rounded-full`, backdrop blur, `target="_blank"` to `/resume.pdf`).
 - Maintained symmetrical two-button layout (`VIEW PROJECTS` + `VIEW RESUME`) in the hero section.
 
+## 2026-10-08 00:10 · Sync Full Work Experience History from Resume
+
+Updated `experiences` in `src/data/content.ts` to reflect the complete 7+ year professional history extracted from the authentic 3-page resume document.
+
+**Decisions**
+- Added missing historical roles: `Navaratan Technologies` (Associate Software Developer, Sep 2021 – May 2022) and `B2BDock` (Application Developer, Oct 2019 – Sep 2021).
+- Expanded bullet points across all roles (LangGraph orchestration, Supabase pgvector hybrid RAG, Forward Deployed Engineer responsibilities, enterprise CRQ workflows).
+- Resolved JSX entity quote escaping in `ExperienceTimeline.tsx`.
+

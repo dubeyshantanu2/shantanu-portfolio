@@ -205,14 +205,15 @@ export const blogPosts: BlogPost[] = [
 export const experiences: Experience[] = [
   {
     company: "Independent Contract",
-    role: "Software Engineer — AI-Directed Systems",
+    role: "Software Engineer — AI-Directed Systems Engineering",
     period: "Mar 2026 - Present",
     location: "Remote",
     bullets: [
-      "Design and direct the implementation of production systems using LLM coding agents as the primary build layer.",
-      "Built a repeatable engineering pipeline (specification → ADR → implementation → QA report → PR) with human review gates.",
-      "Delivered on Python 3.11 / asyncio with WebSocket APIs, Supabase persistence, and Redis pub/sub deployed via Docker on Fly.io.",
-      "Specified and shipped an XGBoost trade-outcome classifier using walk-forward validation and Isolation Forest anomaly detection.",
+      "Architect and direct production multi-agent systems using LangGraph and Python 3.11 asyncio: author technical specifications and state graphs, deploying cyclical workflows with Human-in-the-Loop (HITL) checkpoints and PostgreSQL state persistence.",
+      "Built a repeatable engineering pipeline — specification → architecture decision record → implementation → debug report → automated eval gate → pull request — backed by DeepEval and Langfuse tracing to monitor token costs, latency (p95 < 650ms), and prevent model regressions.",
+      "Engineered a Hybrid RAG retrieval pipeline using Supabase pgvector and PostgreSQL full-text search with Reciprocal Rank Fusion (RRF) and strict Pydantic v2 schema enforcement, achieving sub-150ms semantic search with zero JSON extraction hallucinations.",
+      "Delivered high-throughput asynchronous services on Python 3.11 with WebSocket and REST APIs, Redis pub/sub, token-bucket rate governance, and multi-stage Docker deployments on Fly.io.",
+      "Specified and shipped an XGBoost trade-outcome classifier using walk-forward validation, SHAP feature attributions, and an unsupervised Isolation Forest anomaly-detection overlay with drift monitoring.",
     ],
   },
   {
@@ -221,10 +222,11 @@ export const experiences: Experience[] = [
     period: "Dec 2024 - Mar 2026",
     location: "Bengaluru, India",
     bullets: [
-      "Developed React Native components for the Sidekick mini-app within the Me@Walmart platform, integrating Redux selectors to manage goal types.",
-      "Designed shared frontend components and widgets including API integration, error handling, and multi-workflow support.",
-      "Used Claude API and GitHub Copilot to accelerate feature delivery, code review, and debugging workflows.",
-      "Authored and processed Change Requests (CRQs) for production deployments in compliance with enterprise processes.",
+      "Developed React Native components for the Sidekick mini-app within the Me@Walmart platform, integrating Redux selectors to manage goal types and role-based conditional rendering (leads vs. associates), improving navigation and task-completion flows.",
+      "Designed shared frontend components and widgets for the MyWalmart platform, including API integration, error handling, and multi-workflow support; estimated and implemented features in alignment with Figma designs.",
+      "Processed and formatted large asynchronous datasets in JavaScript/JSON for testing (task queues with statuses, durations, hierarchies), supporting efficient mobile app development and state synchronization.",
+      "Used Claude API and GitHub Copilot to accelerate feature delivery, automated debugging, and code review workflows on complex enterprise features.",
+      "Authored and processed Change Requests (CRQs) for production deployments in compliance with enterprise change-management and SOC2 audit processes.",
     ],
   },
   {
@@ -233,9 +235,11 @@ export const experiences: Experience[] = [
     period: "Dec 2022 - Dec 2024",
     location: "London, UK (Remote)",
     bullets: [
-      "Built cross-platform iOS/Android applications using React Native, translating Figma designs into pixel-perfect production UI.",
-      "Ensured app stability via TDD with Jest and React Native Testing Library, deploying applications via TestFlight and Bitrise.",
-      "Implemented Redux for state management and optimized app performance through efficient RESTful API data handling.",
+      "Functioned as forward deployed engineer across multiple client engagements, translating business requirements into technical solution designs and shipping cross-platform iOS/Android applications from 0 to 1.",
+      "Implemented Redux for state management and optimized application performance through efficient data handling with JSON and RESTful APIs.",
+      "Ensured application stability via TDD with Jest and React Native Testing Library; used Flipper for debugging/performance monitoring and Mixpanel for user analytics.",
+      "Deployed applications via TestFlight and Bitrise with CI/CD pipelines; participated actively in architecture reviews and client sprint presentations.",
+      "Fixed runtime and native iOS/Android bugs to maintain seamless functionality across client projects.",
     ],
   },
   {
@@ -244,8 +248,29 @@ export const experiences: Experience[] = [
     period: "May 2022 - Dec 2022",
     location: "Bengaluru, India",
     bullets: [
-      "Built complex UI screens and custom components using Redash, Skia, and Reanimated within an Expo monorepo setup.",
+      "Built complex UI screens and custom components using Redash, Skia, and Reanimated within an Expo monorepo setup; used EAS Build for scalable, efficient app builds.",
       "Used TypeScript for type-safe development; integrated Jotai, Google API, and GraphQL for user-facing features.",
+    ],
+  },
+  {
+    company: "Navaratan Technologies",
+    role: "Associate Software Developer",
+    period: "Sep 2021 - May 2022",
+    location: "Hyderabad, India",
+    bullets: [
+      "Built React Native UI components and implemented Redux state management for client applications, ensuring a seamless user experience.",
+      "Integrated RESTful APIs and JSON for backend integration and data exchange; collaborated directly with clients to understand requirements and deliver solutions to complex problems.",
+    ],
+  },
+  {
+    company: "B2BDock",
+    role: "Application Developer",
+    period: "Oct 2019 - Sep 2021",
+    location: "Bengaluru, India",
+    bullets: [
+      "Designed and implemented application solutions for B2BDock's platform targeting both Android and iOS, using React Native and Redux for frontend development.",
+      "Built a comprehensive CRM system for customer interaction management; integrated third-party APIs to extend functionality and improve user experience.",
+      "Delivered applications that contributed directly to company growth and helped the founder secure funding in the company's first round.",
     ],
   },
 ];
