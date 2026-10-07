@@ -75,3 +75,12 @@ Fixed the "HIRE ME" button in `Hero.tsx` so clicking reliably opens the email cl
 - Elevated CTA buttons layer to `relative z-30` above lower-level `z-10` floating panels while preserving `GlassPanel` `pointer-events-auto` for hover and scaling micro-interactions.
 - Relied on native `href="mailto:..."` with `cursor-pointer` (matching `Contact.tsx`) without redundant `onClick` handlers, avoiding duplicate mail client invocations or browser throttling.
 
+## 2026-10-08 00:01 · Replace Hero HIRE ME Button with VIEW RESUME CTA
+
+Removed the "HIRE ME" button from `Hero.tsx` and placed the "VIEW RESUME" button in its secondary pill CTA position.
+
+**Decisions**
+- Removed the "HIRE ME" mailto button from the Hero CTA group.
+- Promoted "VIEW RESUME" from inline text link to the secondary pill button (`rounded-full`, backdrop blur, `target="_blank"` to `/resume.pdf`).
+- Maintained symmetrical two-button layout (`VIEW PROJECTS` + `VIEW RESUME`) in the hero section.
+

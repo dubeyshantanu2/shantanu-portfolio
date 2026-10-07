@@ -134,12 +134,11 @@ export function Hero() {
               VIEW PROJECTS
             </a>
             <a 
-              href={`mailto:${profile.email}`} 
+              href={profile.resumeUrl} 
+              target="_blank" 
+              rel="noopener noreferrer" 
               className="bg-black/5 dark:bg-white/5 border border-black/10 dark:border-white/10 hover:bg-black/10 dark:hover:bg-white/10 text-slate-900 dark:text-white px-8 py-3.5 rounded-full font-medium tracking-wide transition-all duration-300 backdrop-blur-sm cursor-pointer"
             >
-              HIRE ME
-            </a>
-            <a href={profile.resumeUrl} target="_blank" rel="noopener noreferrer" className="ml-2 text-slate-600 dark:text-slate-400 hover:text-[var(--accent)] dark:hover:text-[var(--accent)] transition-colors font-medium text-sm flex items-center gap-1">
               VIEW RESUME
             </a>
           </motion.div>
